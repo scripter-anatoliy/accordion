@@ -1,0 +1,77 @@
+.select .main {
+    /*border: 1px solid black;*/
+    /*display: inline-block;*/
+    /*min-height: 30px;*/
+    /*min-width: 70px;*/
+    /*font-size: 22px;*/
+    position: absolute;
+    padding: 12px;
+    width: 252px;
+    height: 48px;
+    left: 103px;
+    background: rgba(128, 131, 164, 0.06);
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8083A4;
+}
+
+.select .main img {
+    position: absolute;
+    right: 8.08%;
+    top: 40.83%;
+    bottom: 22.41%;
+
+}
+
+.items {
+    position: absolute;
+    width: 252px;
+    height: 160px;
+    left: 104px;
+    top: 100px;
+    border: 2px solid rgba(128, 131, 164, 0.06);
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(4, 5, 73, 0.16), 14px 14px 20px rgba(5, 6, 114, 0.08);
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+
+.items:hover {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+.items::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+}
+.items::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    height: 20px;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+
+.item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2C2D76;
+    padding: 10px;
+}
+
+.hovered {
+    cursor: pointer;
+    background-color: #a0a0dd;
+    color: red;
+}
+
