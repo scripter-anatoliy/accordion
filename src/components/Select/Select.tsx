@@ -67,7 +67,6 @@ export function Select(props: SelectPropsType) {
             <span className={styles.main} onClick={toggleItems}>{selectItems && selectItems.title}
                 <img src={!active ? arrowDown : arrowUp} alt=""/>
 
-
             </span>
             {
                 active &&
