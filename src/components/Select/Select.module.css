@@ -49,15 +49,17 @@
     -o-overflow-scrolling: touch;
     overflow-scrolling: touch;
 }
+
 .items::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 4px;
 }
+
 .items::-webkit-scrollbar-thumb {
     border-radius: 2px;
     height: 20px;
-    background-color: rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .item {
