@@ -4,6 +4,7 @@ import './App.css';
 import {RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {Select} from "./components/Select/Select";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             {/*           }}*/}
 
             {/*/>*/}
+
 
             {/*<UncontrolledRating  />*/}
 
