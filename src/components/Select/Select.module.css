@@ -1,3 +1,7 @@
+.select {
+    position: relative;
+}
+
 .select .main {
     /*border: 1px solid black;*/
     /*display: inline-block;*/
@@ -18,6 +22,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #8083A4;
+    display: inline-block;
 }
 
 .select .main img {
@@ -29,7 +34,6 @@
 }
 
 .items {
-    display: flex;
     position: absolute;
     width: 252px;
     height: 160px;
@@ -70,8 +74,6 @@
     line-height: 24px;
     color: #2C2D76;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .hovered {
