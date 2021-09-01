@@ -18,7 +18,7 @@ export type AccordionPropsType = {
     onClick: (value: any) => void
 }
 
-export function Accordion(props: AccordionPropsType) {
+export function AccordionMemo(props: AccordionPropsType) {
     console.log('Accordion rendering')
     return (
         <div>
@@ -50,12 +50,14 @@ export type AccordionBodyPropsType = {
     onClick: (value: any) => void
 }
 
-function AccordionBody(props: AccordionBodyPropsType) {
+function AccordionBodyMemo(props: AccordionBodyPropsType) {
     console.log('AccordionBody rendering')
     return <ul>
         {props.items.map((i, index) => <li onClick={() => {
             props.onClick(i.value)
         }} key={index}>{i.title}</li>)}
     </ul>
-
 }
+
+export const Accordion = React.memo(AccordionMemo)
+export const AccordionBody = React.memo(AccordionBodyMemo)

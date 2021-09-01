@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import {Meta, Story} from '@storybook/react';
-import {Select, SelectPropsType} from "./Select";
+import {Select, SelectPropsType} from "../../components/Select/Select";
 import {action} from "@storybook/addon-actions";
 
 
 export default {
-    title: 'Select',
+    title: 'SelectMemo',
     component: Select,
     argTypes: {
         color: {
@@ -22,7 +22,21 @@ export const WithValue: Story<SelectPropsType> = (args) => {
 
     const [value, setValue] = useState(1)
 
-    return<Select {...args} value={value} onChange={setValue}/>
+    const selectStyle = {
+        display: "inline-block"
+    }
+
+    const spanSelectStyle = {
+        paddingRight: "10px"
+    }
+
+
+    return <div style={selectStyle}>
+        <div><Select {...args} value={value} onChange={setValue}/></div>
+        <div><Select {...args} value={value} onChange={setValue}/></div>
+        <div><Select {...args} value={value} onChange={setValue}/></div>
+
+    </div>
 }
 
 WithValue.args = {
@@ -33,20 +47,5 @@ WithValue.args = {
         {title: "Tanya", value: 4},
         {title: "Maksim", value: 5},
         {title: "Nadya", value: 6},
-    ],
-}
-
-export const WithoutValue: Story<SelectPropsType> = (args) => {
-    const [value, setValue] = useState(0)
-    return <Select {...args} value={value} onChange={setValue}/>
-}
-
-WithoutValue.args = {
-    items: [
-        {title: "Select city", value: 0},
-        {title: "Tolya", value: 1},
-        {title: "Tanya", value: 2},
-        {title: "Maksim", value: 3},
-        {title: "Nadya", value: 4},
     ],
 }

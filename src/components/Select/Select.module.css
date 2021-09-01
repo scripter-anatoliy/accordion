@@ -29,6 +29,7 @@
 }
 
 .items {
+    display: flex;
     position: absolute;
     width: 252px;
     height: 160px;
@@ -69,6 +70,8 @@
     line-height: 24px;
     color: #2C2D76;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hovered {

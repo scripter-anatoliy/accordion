@@ -7,7 +7,7 @@ export type RatingPropsType = {
     onClick: (value: RatingValueType) => void
 }
 
-export function Rating(props: RatingPropsType) {
+export function RatingMemo(props: RatingPropsType) {
     console.log('Rating rendering')
     return (
         <div>
@@ -37,3 +37,5 @@ function Star(props: StarPropsType) {
     //     return <span>Star</span>;
     // }
 }
+
+export const Rating = React.memo(RatingMemo)

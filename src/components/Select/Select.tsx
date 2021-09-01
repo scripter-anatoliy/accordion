@@ -15,7 +15,7 @@ export type SelectPropsType = {
 }
 
 
-export function Select(props: SelectPropsType) {
+export function SelectMemo(props: SelectPropsType) {
 
     const [active, setActive] = useState(false)
     const [hoveredItemValue, setHoveredItemValue] = useState(props.value)
@@ -52,7 +52,6 @@ export function Select(props: SelectPropsType) {
         }
     }
 
-
     return <>
         {/*<select name="" id="">*/}
         {/*    <option value="">Minsk</option>*/}
@@ -63,16 +62,12 @@ export function Select(props: SelectPropsType) {
         <div className={styles.select}
              onKeyUp={onKeyUp}
              tabIndex={0}>
-
             <span className={styles.main} onClick={toggleItems}>{selectItems && selectItems.title}
                 <img src={!active ? arrowDown : arrowUp} alt=""/>
-
-
             </span>
             {
                 active &&
                 <div className={styles.items}>
-
                     {props.items.map(i =>
                         // чтоб скрыть после выбранного значения onClick={() => {
                         //                             props.onChange(i.value); toggleItems()
@@ -93,3 +88,4 @@ export function Select(props: SelectPropsType) {
         </div>
     </>
 }
+export const Select = React.memo(SelectMemo)

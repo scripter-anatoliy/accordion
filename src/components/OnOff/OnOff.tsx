@@ -2,10 +2,10 @@ import React from "react";
 
 type PropsType = {
     on: boolean;
-    onChange: (onValue: boolean)=> void
+    onChange: (onValue: boolean) => void
 }
 
-export function OnOff(props: PropsType) {
+export function OnOffMemo(props: PropsType) {
 
     const onSStyle = {
         width: "30px",
@@ -35,9 +35,17 @@ export function OnOff(props: PropsType) {
     };
     return (
         <div>
-            <div style={onSStyle} onClick={ () => { props.onChange(true) }}>on</div>
-            <div style={offSStyle} onClick={ () => { props.onChange(false) }}>off</div>
+            <div style={onSStyle} onClick={() => {
+                props.onChange(true)
+            }}>on
+            </div>
+            <div style={offSStyle} onClick={() => {
+                props.onChange(false)
+            }}>off
+            </div>
             <div style={indicatorSStyle}></div>
         </div>
     )
 }
+
+export const OnOff = React.memo(OnOffMemo)
