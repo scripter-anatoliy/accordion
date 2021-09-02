@@ -4,7 +4,7 @@ import arrowDown from "../img/arrowDown.svg";
 import arrowUp from "../img/arrowUp.svg";
 
 type ItemsType = {
-    town: string,
+    city: string,
     value: any,
     countryID: number
 }
@@ -63,7 +63,7 @@ export function SelectUseMemo(props: SelectMemoPropsType) {
         <div className={styles.select}
              onKeyUp={onKeyUp}
              tabIndex={0}>
-            <span className={styles.main} onClick={toggleItems}>{selectItems && selectItems.town}
+            <span className={styles.main} onClick={toggleItems}>{selectItems && selectItems.city}
                 <img src={!active ? arrowDown : arrowUp} alt=""/>
             </span>
             {
@@ -81,7 +81,7 @@ export function SelectUseMemo(props: SelectMemoPropsType) {
                                  onItemClick(i.value)
                              }}
                              key={i.value}>
-                            {i.town}
+                            {i.city}
                         </div>)}
                 </div>
             }
