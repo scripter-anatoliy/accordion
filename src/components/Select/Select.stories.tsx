@@ -22,7 +22,17 @@ export const WithValue: Story<SelectPropsType> = (args) => {
 
     const [value, setValue] = useState(1)
 
-    return<Select {...args} value={value} onChange={setValue}/>
+    const selectStyle = {
+        display: "flex",
+        justifyContent: "space-between",
+        width: "500px"
+    }
+
+    return<div style={selectStyle}>
+    <Select {...args} value={value} onChange={setValue}/>
+    <Select {...args} value={value} onChange={setValue}/>
+    <Select {...args} value={value} onChange={setValue}/>
+    </div>
 }
 
 WithValue.args = {
