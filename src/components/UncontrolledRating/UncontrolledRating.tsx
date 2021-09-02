@@ -7,7 +7,7 @@ type RatingPropsType = {
     onChange: (value: RatingValueType) => void
 }
 
-export function UncontrolledRating(props: RatingPropsType) {
+export function UncontrolledRatingMemo(props: RatingPropsType) {
     console.log('Rating rendering')
 
     const [value, setValue] = useState<RatingValueType>(props.defaultValue ? props.defaultValue : 0)
@@ -53,11 +53,12 @@ function Star(props: StarPropsType) {
     }}>
         {props.selected ? <b>Star </b> : "Star "}
     </span>
-
-
+    // тоже самое, что и тернарное выражение сверху
     // if (props.selected === true) {
     //     return <span><b>Star</b></span>;
     // } else {
     //     return <span>Star</span>;
     // }
 }
+
+export const UncontrolledRating = React.memo(UncontrolledRatingMemo)

@@ -1,21 +1,22 @@
 import React, {KeyboardEvent, useEffect, useState} from "react";
-import styles from './Select.module.css';
-import arrowDown from "../img/arrowDown.svg"
-import arrowUp from "../img/arrowUp.svg"
+import styles from "../Select/Select.module.css";
+import arrowDown from "../img/arrowDown.svg";
+import arrowUp from "../img/arrowUp.svg";
 
 type ItemsType = {
-    title: string,
-    value: any
+    town: string,
+    value: any,
+    countryID: number
 }
 
-export type SelectPropsType = {
+export type SelectMemoPropsType = {
     value?: any,
     onChange: (value: any) => void
     items: ItemsType[]
 }
 
 
-export function SelectMemo(props: SelectPropsType) {
+export function SelectUseMemo(props: SelectMemoPropsType) {
 
     const [active, setActive] = useState(false)
     const [hoveredItemValue, setHoveredItemValue] = useState(props.value)
@@ -52,7 +53,6 @@ export function SelectMemo(props: SelectPropsType) {
         }
     }
 
-
     return <>
         {/*<select name="" id="">*/}
         {/*    <option value="">Minsk</option>*/}
@@ -63,15 +63,12 @@ export function SelectMemo(props: SelectPropsType) {
         <div className={styles.select}
              onKeyUp={onKeyUp}
              tabIndex={0}>
-
-            <span className={styles.main} onClick={toggleItems}>{selectItems && selectItems.title}
+            <span className={styles.main} onClick={toggleItems}>{selectItems && selectItems.town}
                 <img src={!active ? arrowDown : arrowUp} alt=""/>
-
             </span>
             {
                 active &&
                 <div className={styles.items}>
-
                     {props.items.map(i =>
                         // чтоб скрыть после выбранного значения onClick={() => {
                         //                             props.onChange(i.value); toggleItems()
@@ -84,13 +81,12 @@ export function SelectMemo(props: SelectPropsType) {
                                  onItemClick(i.value)
                              }}
                              key={i.value}>
-                            {i.title}
-
-                        </div>).splice(1, 5)}
+                            {i.town}
+                        </div>)}
                 </div>
             }
         </div>
     </>
 }
 
-export const Select = React.memo(SelectMemo)
+export const SelectMemo = React.memo(SelectUseMemo)
