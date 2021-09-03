@@ -63,7 +63,6 @@ export const SetTimeoutExample = () => {
         }, 1000)
     }, [])
 
-
     return <>
         Hello fake: {fake}
         {/*<button onClick={() => setFake(fake + 1)}>fake</button>*/}

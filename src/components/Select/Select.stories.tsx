@@ -28,8 +28,8 @@ export const WithValue: Story<SelectPropsType> = (args) => {
         width: "500px"
     }
 
-    return<div style={selectStyle}>
-    <Select {...args} value={value} onChange={setValue}/>
+    return <div style={selectStyle}>
+        <Select {...args} value={value} onChange={setValue}/>
     </div>
 }
 

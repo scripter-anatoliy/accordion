@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Clock} from "./Clock";
+import React from "react";
+import {Clock, ClockDivided} from "./Clock";
 
 export default {
     title: "Clock ",
@@ -8,8 +8,8 @@ export default {
 
 export const ModeClock = () => {
     console.log("Example")
-
     return <>
         <Clock/>
+        <ClockDivided/>
     </>
 }
