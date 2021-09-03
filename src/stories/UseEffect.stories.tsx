@@ -4,7 +4,6 @@ export default {
     title: "UseEffect demo",
 }
 
-
 export const SimpleExample = () => {
     console.log("Example")
     const [fake, setFake] = useState(1)
@@ -62,7 +61,6 @@ export const SetTimeoutExample = () => {
             setCounter(state => state + 1)
         }, 1000)
     }, [])
-
 
     return <>
         Hello fake: {fake}
