@@ -25,7 +25,6 @@ export const DifficultCountingExample = () => {
         return tempResultA
     }, [a])
 
-
     for (let i = 1; i <= b; i++) {
         resultB = resultB * i
     }
@@ -49,7 +48,6 @@ const UsersSecret = (props: { users: Array<string> }) => {
 }
 
 const Users = React.memo(UsersSecret)
-
 
 export const HelpsReactMemoExample1 = () => {
     console.log("HelpsReactMemoExample1")
@@ -79,16 +77,17 @@ export const LikeUseCallback = () => {
     const [books, setBooks] = useState(["ReactJS", "JS", "CSS", "HTML"])
 
     const addBooks = useMemo(() => {
-        return ()=>{
+        return () => {
             console.log(books)
-         const newBooks = [...books, "Angular" + new Date().getTime()]
-        setBooks(newBooks)
-    }},[books])
+            const newBooks = [...books, "Angular" + new Date().getTime()]
+            setBooks(newBooks)
+        }
+    }, [books])
     const addBooks2 = useCallback(() => {
         console.log(books)
         const newBooks = [...books, "Angular" + new Date().getTime()]
         setBooks(newBooks)
-    },[books])
+    }, [books])
 
     return <>
         <button onClick={() => setCounter(counter + 1)}>+</button>

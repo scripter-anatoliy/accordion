@@ -42,7 +42,6 @@ UserUnCollapsedMode.args = {
     onClick: onClickCallback
 }
 
-
 export const ModeChanging: Story<AccordionPropsType> = (args) => {
     const [collapsed, setCollapsed] = useState<boolean>(true)
     return <Accordion {...args} collapsed={collapsed} onChange={() => setCollapsed(!collapsed)}/>
@@ -56,5 +55,7 @@ ModeChanging.args = {
         {title: "Maksim", value: 3},
         {title: "Nadya", value: 4},
     ],
-    onClick: (value) => {alert(`user wish ID ${value} should be happy`)}
+    onClick: (value) => {
+        alert(`user wish ID ${value} should be happy`)
+    }
 }

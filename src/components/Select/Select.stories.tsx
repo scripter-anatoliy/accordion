@@ -3,7 +3,6 @@ import {Meta, Story} from '@storybook/react';
 import {Select, SelectPropsType} from "./Select";
 import {action} from "@storybook/addon-actions";
 
-
 export default {
     title: 'Select',
     component: Select,
@@ -16,7 +15,6 @@ export default {
 
 const callback = action("select")
 const onClickCallback = action("some item was clicked")
-
 
 export const WithValue: Story<SelectPropsType> = (args) => {
 

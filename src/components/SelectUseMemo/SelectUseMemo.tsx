@@ -15,7 +15,6 @@ export type SelectMemoPropsType = {
     items: ItemsType[]
 }
 
-
 export function SelectUseMemo(props: SelectMemoPropsType) {
 
     const [active, setActive] = useState(false)
@@ -33,6 +32,7 @@ export function SelectUseMemo(props: SelectMemoPropsType) {
         props.onChange(value)
         toggleItems()
     }
+
     const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0; i < props.items.length; i++) {

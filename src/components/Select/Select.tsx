@@ -14,7 +14,6 @@ export type SelectPropsType = {
     items: ItemsType[]
 }
 
-
 export function SelectMemo(props: SelectPropsType) {
 
     const [active, setActive] = useState(false)
@@ -32,6 +31,7 @@ export function SelectMemo(props: SelectPropsType) {
         props.onChange(value)
         toggleItems()
     }
+
     const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0; i < props.items.length; i++) {
@@ -81,7 +81,6 @@ export function SelectMemo(props: SelectPropsType) {
                              }}
                              key={i.value}>
                             {i.title}
-
                         </div>).splice(1, 5)}
                 </div>
             }

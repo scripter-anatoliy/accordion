@@ -4,7 +4,6 @@ export default {
     title: "UseEffect demo",
 }
 
-
 export const SimpleExample = () => {
     console.log("Example")
     const [fake, setFake] = useState(1)
@@ -68,7 +67,6 @@ export const SetTimeoutExample = () => {
         {/*<button onClick={() => setFake(fake + 1)}>fake</button>*/}
         hello counter: {counter}
         {/*<button onClick={() => setCounter(counter + 1)}>counter</button>*/}
-
     </>
 }
 

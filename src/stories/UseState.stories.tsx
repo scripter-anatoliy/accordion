@@ -9,7 +9,6 @@ function generation() {
     return 1;
 }
 
-
 export const Example1 = () => {
     console.log("Example")
     const [counter, setCounter] = useState(generation)

@@ -2,8 +2,6 @@ import React, {useMemo, useState} from 'react';
 import {Meta} from '@storybook/react';
 import {Select} from "../components/Select/Select";
 import {SelectMemo} from "../components/SelectUseMemo/SelectUseMemo";
-import {log} from "util";
-
 
 export default {
     title: 'SelectMemo',
@@ -14,7 +12,6 @@ export default {
         }
     }
 } as Meta;
-
 
 export const SelectUseMemoDemo = () => {
     console.log("wish")
@@ -30,7 +27,6 @@ export const SelectUseMemoDemo = () => {
         {countryID: 3, city: "Kharkov", value: 9},
     ]
 
-
     const [value1, setValue1] = useState(1)
     const [value2, setValue2] = useState(2)
     const [value3, setValue3] = useState(1)
@@ -42,13 +38,15 @@ export const SelectUseMemoDemo = () => {
         console.log("county")
         console.log(countryRussia)
         return countryRussia.filter(c => c.countryID === 1)
-        }, [countryRussia])
+    }, [countryRussia])
+
     const newArrayCityA = useMemo(() => {
-        debugger
+
         console.log("cityA")
         console.log(cityOfValueA)
         return cityOfValueA.filter(c => c.city.toLowerCase().indexOf("a") > -1)
     }, [])
+
     const newArrayCityB = useMemo(() => {
         console.log("cityB")
         return cityOfValueB.filter(c => c.city.toLowerCase().indexOf("o") > -1)

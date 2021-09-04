@@ -27,17 +27,14 @@ export const ClockDivided = () => {
     const [data, setData] = useState(new Date())
 
     useEffect(() => {
-
         const setIntervalID = setInterval(() => {
             console.log("TICK")
             setData(new Date())
         }, 1000)
 
-        return ()=> {
-
+        return () => {
             clearInterval(setIntervalID)
         }
-
     }, [])
 
     return <div>
