@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import style from './FancyClock.module.css';
+import clockFace from "../../assets/img/clockFace.png"
+import clockJs from "../../assets/img/clockJs.png"
 
 
 export const FancyClock = () => {
-
+    console.log("FancyClock")
     // const [hr, setHr] = useState(document.querySelector('#hr'))
     // const [sc, setSc] = useState(document.querySelector('#hr'))
     // const [mn, setMn] = useState(document.querySelector('#hr'))
-
 
 
     useEffect(() => {
@@ -15,7 +16,8 @@ export const FancyClock = () => {
         const hr = document.querySelector('#hr');
         const sc = document.querySelector('#sc');
 
-        setInterval(() => {
+        const setIntervalID = setInterval(() => {
+            console.log("FancyClockInterval")
             let data = new Date()
             let hh = data.getHours() * 30;
             let mm = data.getMinutes() * deg;
@@ -29,11 +31,16 @@ export const FancyClock = () => {
             // @ts-ignore
             sc.style.transform = `rotateZ(${ss}deg)`;
         },)
+        return () => {
+            clearInterval(setIntervalID)
+        }
     }, [])
 
 
     return <div className={style.body}>
         <div className={style.clock}>
+            <img src={clockFace} alt=""/>
+            <img src={clockJs} alt=""/>
             <div className={style.hour}>
                 <div className={style.hr} id="hr"></div>
             </div>

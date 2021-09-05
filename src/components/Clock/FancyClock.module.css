@@ -4,15 +4,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(https://antonaniskovich.ru/images/javascript/2020/2020-03-21-chasy-na-javascript/file/clock.png),
-    url(https://antonaniskovich.ru/images/javascript/2020/2020-03-21-chasy-na-javascript/file/js.png),
-    radial-gradient(circle, rgb(37, 73, 90) 0%, rgb(25, 48, 60) 11%, rgba(9,25,33,1) 38%);
+    background: radial-gradient(circle, rgb(37, 73, 90) 0%, rgb(25, 48, 60) 11%, rgba(9,25,33,1) 38%);
     background-size: cover;
     border-radius: 50%;
     box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35),
     inset 0 -15px 15px #191919,
     0 15px 15px rgba(134, 134, 134, 0.35),
     inset 0 15px 15px #191919;
+
+}
+.clock img {
+   position: absolute;
 }
 
 .clock:before {
