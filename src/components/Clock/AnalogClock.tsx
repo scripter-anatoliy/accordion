@@ -2,13 +2,12 @@ import React, {useEffect} from "react";
 import style from './AnalogClock.module.css';
 import clockFace from "../../assets/img/clockFace.png"
 import clockJs from "../../assets/img/clockJs.png"
+import {ClockDataType} from "./ClockDivided";
 
 
-export type AnalogClockType = {
-    mode: "analog" | "digital"
-}
 
-export const AnalogClock = (props: AnalogClockType) => {
+
+export const AnalogClock: React.FC<ClockDataType> = ({date}) => {
     console.log("AnalogClock")
     // const [hr, setHr] = useState(document.querySelector('#hr'))
     // const [sc, setSc] = useState(document.querySelector('#hr'))
