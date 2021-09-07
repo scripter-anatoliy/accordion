@@ -1,6 +1,8 @@
-import {ClockDataType, utilTimeString} from "./ClockDivided";
+import {ClockDataType} from "./ClockDivided";
 import React from "react";
 import style from "./Clock.module.css";
+
+const utilTimeString = (num: number) => num < 10 ? "0" + num : num
 
 export const DigitalClock: React.FC<ClockDataType> = ({date}) => {
     console.log("DigitalClock")

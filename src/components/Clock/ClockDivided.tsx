@@ -1,25 +1,22 @@
 import React, {useEffect, useState} from "react";
-import style from "./Clock.module.css";
 import {AnalogClock} from "./AnalogClock";
 import {DigitalClock} from "./DigitalClock";
 
-export const utilTimeString = (num: number) => num < 10 ? "0" + num : num
-
-export type ClockDataType= {
+export type ClockDataType = {
     date: Date
 }
 export type ClockDividedType = {
     mode?: "analog" | "digital"
 }
 
-export const ClockDivided: React.FC<ClockDividedType> = (props: ClockDividedType) => {
+export const ClockDivided: React.FC<ClockDividedType> = (props) => {
 
-    const [data, setData] = useState(new Date())
+    const [dateNew, setDateNew] = useState(new Date())
 
     useEffect(() => {
         const setIntervalID = setInterval(() => {
             console.log("TICK")
-            setData(new Date())
+            setDateNew(new Date())
         }, 1000)
 
         return () => {
@@ -27,18 +24,18 @@ export const ClockDivided: React.FC<ClockDividedType> = (props: ClockDividedType
         }
     }, [])
 
-    let view
+    let view;
 
-    switch (props.mode){
+    switch (props.mode) {
         case 'analog':
-            view = <AnalogClock date={date}/>;
-            break
+            view = <AnalogClock date={dateNew}/>;
+            break;
         case "digital":
         default:
-            view = <DigitalClock date={date}/>
+            view = <DigitalClock date={dateNew}/>
     }
 
-    return <div>
+    return <>
         {view}
-    </div>
+    </>
 }
