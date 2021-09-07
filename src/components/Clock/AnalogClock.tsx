@@ -11,6 +11,7 @@ export const AnalogClock: React.FC<ClockDataType> = ({date}) => {
     const sc = document.querySelector('#sc');
 
     setInterval(() => {
+        let date = new Date()
         let hh = date.getHours() * 30;
         let mm = date.getMinutes() * deg;
         let ss = date.getSeconds() * deg;
@@ -39,17 +40,17 @@ export const AnalogClock: React.FC<ClockDataType> = ({date}) => {
                 <img src={clockJs} alt=""/>
                 <div className={style.hour}>
                     <div className={style.hr}
-                         id={"hr"}>
+                         id="hr">
                     </div>
                 </div>
                 <div className={style.min}>
                     <div className={style.mn}
-                         id={"mn"}>
+                         id="mn">
                     </div>
                 </div>
                 <div className={style.sec}>
                     <div className={style.sc}
-                         id={"sc"}>
+                         id="sc">
                     </div>
                 </div>
             </div>
