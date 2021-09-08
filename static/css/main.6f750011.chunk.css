@@ -1,0 +1,313 @@
+.AnalogClock_clock__2zjWo {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgb(37, 73, 90) 0%, rgb(25, 48, 60) 11%, rgba(9,25,33,1) 38%);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35),
+    inset 0 -15px 15px #191919,
+    0 15px 15px rgba(134, 134, 134, 0.35),
+    inset 0 15px 15px #191919;
+
+}
+.AnalogClock_clock__2zjWo img {
+   position: absolute;
+}
+
+.AnalogClock_clock__2zjWo:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.AnalogClock_clock__2zjWo .AnalogClock_hour__WEtBa,
+.AnalogClock_clock__2zjWo .AnalogClock_min__3givc,
+.AnalogClock_clock__2zjWo .AnalogClock_sec__NhdEN {
+    position: absolute;
+}
+
+.AnalogClock_clock__2zjWo .AnalogClock_hour__WEtBa, .AnalogClock_hr__1bz7J {
+    width: 160px;
+    height: 160px;
+}
+
+.AnalogClock_clock__2zjWo .AnalogClock_min__3givc, .AnalogClock_mn__36Z90 {
+    width: 190px;
+    height: 190px;
+}
+
+.AnalogClock_clock__2zjWo .AnalogClock_sec__NhdEN, .AnalogClock_sc__2SlQo {
+    width: 230px;
+    height: 230px;
+}
+
+.AnalogClock_hr__1bz7J, .AnalogClock_mn__36Z90, .AnalogClock_sc__2SlQo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.AnalogClock_hr__1bz7J:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: #ffc600;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.AnalogClock_mn__36Z90:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.AnalogClock_sc__2SlQo:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+.Clock_clockStyle__34Wb9 {
+    margin: auto;
+    max-width: 500px;
+    min-width: 100px;
+    background: white;
+    text-align: center;
+    font-size: 32px;
+    padding: 10px;
+    border-top: 10px solid #55c49f;
+    margin-top: 100px
+}
+.Select_select__3RfBE {
+    position: relative;
+}
+
+.Select_select__3RfBE .Select_main__2nM6e {
+    /*border: 1px solid black;*/
+    /*display: inline-block;*/
+    /*min-height: 30px;*/
+    /*min-width: 70px;*/
+    /*font-size: 22px;*/
+    position: absolute;
+    padding: 12px;
+    width: 252px;
+    height: 48px;
+    left: 103px;
+    background: rgba(128, 131, 164, 0.06);
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8083A4;
+    display: inline-block;
+}
+
+.Select_select__3RfBE .Select_main__2nM6e img {
+    position: absolute;
+    right: 8.08%;
+    top: 40.83%;
+    bottom: 22.41%;
+
+}
+
+.Select_items__1kfB3 {
+    position: absolute;
+    width: 252px;
+    height: 160px;
+    left: 104px;
+    top: 100px;
+    border: 2px solid rgba(128, 131, 164, 0.06);
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(4, 5, 73, 0.16), 14px 14px 20px rgba(5, 6, 114, 0.08);
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+
+.Select_items__1kfB3:hover {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+.Select_items__1kfB3::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+}
+
+.Select_items__1kfB3::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.Select_item__1eYic {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2C2D76;
+    padding: 10px;
+}
+
+.Select_hovered__3iYYK {
+    cursor: pointer;
+    background-color: #a0a0dd;
+    color: red;
+}
+
+
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.wrapper {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+section {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 48px 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #333;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1;
+  margin: 0 0 4px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1ea7fd;
+}
+
+ul {
+  padding-left: 30px;
+  margin: 1em 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.tip {
+  display: inline-block;
+  border-radius: 1em;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 700;
+  background: #e7fdd8;
+  color: #66bf3c;
+  padding: 4px 12px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.tip-wrapper {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.tip-wrapper svg {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-right: 4px;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+.tip-wrapper svg path {
+  fill: #1ea7fd;
+}
+
+
+/*# sourceMappingURL=main.6f750011.chunk.css.map*/
