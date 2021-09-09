@@ -1,14 +1,12 @@
 import React, {useState} from "react";
 import {RatingValueType} from "../Rating/Rating";
 
-
 type RatingPropsType = {
     defaultValue?: RatingValueType
     onChange: (value: RatingValueType) => void
 }
 
 export function UncontrolledRatingMemo(props: RatingPropsType) {
-    console.log('Rating rendering')
 
     const [value, setValue] = useState<RatingValueType>(props.defaultValue ? props.defaultValue : 0)
 
@@ -34,7 +32,6 @@ export function UncontrolledRatingMemo(props: RatingPropsType) {
                 setValue(5);
                 props.onChange(5)
             }}/>
-
             {/*<Star selected={props.value > 2}/><button>3</button>
             <Star selected={props.value > 3}/><button>4</button>
             <Star selected={props.value > 4}/><button>5</button>*/}

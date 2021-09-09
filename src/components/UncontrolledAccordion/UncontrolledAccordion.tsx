@@ -1,14 +1,12 @@
 import React, {useReducer} from "react";
 import {reducer, TOGGLE_CONSTANT} from "./reducer";
 
-
 type AccordionPropsType = {
     titleValue: string
     // collapsed: boolean
 }
 
 export function UncontrolledAccordionMemo(props: AccordionPropsType) {
-    console.log('Accordion rendering')
 
     let [state, dispatch] = useReducer(reducer, {collapsed: false});
 
@@ -28,7 +26,6 @@ type AccordionTitlePropsType = {
 }
 
 function AccordionTitleMemo(props: AccordionTitlePropsType) {
-    console.log('AccordionTitle rendering');
 
     return <h3 onClick={() => {
         props.onClick()
@@ -36,7 +33,7 @@ function AccordionTitleMemo(props: AccordionTitlePropsType) {
 }
 
 function AccordionBodyMemo() {
-    console.log('AccordionBody rendering')
+
     return (
         <ul>
             <li>1</li>

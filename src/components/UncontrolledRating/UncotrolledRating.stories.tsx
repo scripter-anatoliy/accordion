@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Meta} from '@storybook/react';
 import {UncontrolledRating} from "./UncontrolledRating";
 import {action} from "@storybook/addon-actions";
-import {Rating, RatingValueType} from "../Rating/Rating";
-
 
 export default {
     title: 'UncontrolledRating',
